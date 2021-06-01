@@ -1,0 +1,13 @@
+<div>
+  <h1 class="d-inline-block"><%= @article.title %></h1>
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fas fa-pencil-alt"></i>
+  <% end %>
+  <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="far fa-trash-alt"></i>
+  <% end %>
+
+
+</div>
+<hr>
+<p><%= @article.content %></p>
